@@ -1,0 +1,38 @@
+{
+    "name": "stackz-demo",
+    "version": "1.0.0",
+    "description": "A starter template for react-based projects",
+    "browserslist": "> 0.5%, last 2 versions, not dead",
+    "scripts": {
+        "start": "rm -rf dist .parcel-cache && parcel src/index.html --open",
+        "build": "rm -rf dist .parcel-cache && parcel build src/index.html --public-url ./ --no-source-maps"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.12.0",
+        "@eslint/js": "^9.5.0",
+        "babel-plugin-styled-components": "^2.1.4",
+        "buffer": "^5.5.0||^6.0.0",
+        "eslint": "^8.57.0",
+        "eslint-plugin-react": "^7.34.3",
+        "eslint-plugin-react-hooks": "^4.6.2",
+        "parcel": "^2.12.0",
+        "postcss": "^8.4.40",
+        "process": "^0.11.10",
+        "tailwindcss": "^3.4.7"
+    },
+    "dependencies": {
+        "@splinetool/react-spline": "^4.0.0",
+        "@splinetool/runtime": "^1.9.25",
+        "gsap": "^3.12.5",
+        "react": "^18.3.1",
+        "react-cookie": "^7.1.4",
+        "react-dom": "^18.3.1",
+        "react-router-dom": "^6.24.1",
+        "styled-components": "^6.1.11"
+    },
+    "@parcel/resolver-default": {
+        "packageExports": true
+    }
+}
