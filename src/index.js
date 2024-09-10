@@ -12,29 +12,34 @@ import Home from "./pages/home";
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+    [
+        {
+            path: "/",
+            element: <Root />,
+            errorElement: (
+                <AppLayout>
+                    <Error />
+                </AppLayout>
+            ),
+            children: [
+                {
+                    errorElement: <Error />,
+                    children: [
+                        { index: true, element: <Home /> },
+                        {
+                            path: "contact-us",
+                            element: <Contact />,
+                        },
+                    ],
+                },
+            ],
+        },
+    ],
     {
-        path: "/",
-        element: <Root />,
-        errorElement: (
-            <AppLayout>
-                <Error />
-            </AppLayout>
-        ),
-        children: [
-            {
-                errorElement: <Error />,
-                children: [
-                    { index: true, element: <Home /> },
-                    {
-                        path: "contact-us",
-                        element: <Contact />,
-                    },
-                ],
-            },
-        ],
-    },
-]);
+        basename: "/spline/stackz-demo",
+    }
+);
 
 const Container = () => {
     // sample usage for Html and Loader: https://drei.pmnd.rs/?path=/docs/misc-useprogress--docs

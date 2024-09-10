@@ -37,18 +37,18 @@ const OverlayWrapper = styled.div`
 // extract AppLayout from root for wrapping the error page in the routes config
 // https://stackoverflow.com/questions/76385016/react-router-how-can-i-reuse-my-layout-for-the-errorelement-in-the-root-route
 export const AppLayout = ({ children }) => {
-    const [loading, setLoading] = useState(true);
+    // const [loading, setLoading] = useState(true);
 
     return (
         <>
             <SplineWrapper>
-                {loading && (
+                {/* {loading && (
                     <LoadingWrapper>
                         <div className="scene-loader"></div>
                     </LoadingWrapper>
-                )}
+                )} */}
                 <Spline
-                    onSplineStart={() => setLoading(false)}
+                    // onSplineStart={() => setLoading(false)}
                     scene="https://prod.spline.design/FXhQ3RrUyzK8vVF5/scene.splinecode"
                 />
             </SplineWrapper>
